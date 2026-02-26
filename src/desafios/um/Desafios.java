@@ -1,4 +1,4 @@
-package desafios;
+package desafios.um;
 
 // 1
 public class Desafios {
