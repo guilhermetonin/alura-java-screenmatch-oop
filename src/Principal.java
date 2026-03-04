@@ -1,4 +1,6 @@
 import br.com.alura.screematch.calculos.CalculadoraDeTempo;
+import br.com.alura.screematch.calculos.FiltroRecomendacao;
+import br.com.alura.screematch.modelos.Episodio;
 import br.com.alura.screematch.modelos.Filme;
 import br.com.alura.screematch.modelos.Serie;
 
@@ -26,6 +28,16 @@ public class Principal {
         calculadora.inclui(avatar);
         calculadora.inclui(lost);
         System.out.println("calculadora - duração total: " + calculadora.getTempoTotal());
+
+        // filtragem de classificação
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(scarface);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie("THE LOST");
+        episodio.setTotalVisualizacoes(400);
+        filtro.filtra(episodio);
 
     }
 }

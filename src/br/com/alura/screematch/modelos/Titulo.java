@@ -62,8 +62,8 @@ public class Titulo {
         totalDeAvaliacoes++;
     }
 
-    public String calculaMedia() {
-        return String.format("Média das avaliações: %.2f", (somaDasAvaliacoes / totalDeAvaliacoes));
+    public double calculaMedia() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
 }
