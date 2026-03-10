@@ -11,6 +11,10 @@ public class Produto {
         this.setQuantidade(quantidade);
     }
 
+    public double getPreco() {
+        return this.preco;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }

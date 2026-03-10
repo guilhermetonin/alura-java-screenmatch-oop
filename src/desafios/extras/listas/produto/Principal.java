@@ -30,5 +30,13 @@ public class Principal {
 
         // exibe na tela
         System.out.println("\nLista de Produtos Pericíveis: " + listaProdutosPericiveis);
+
+        // calcula o preco médio
+        double precoMedio = 0;
+        for (Produto item: listaProdutos) {
+            precoMedio += item.getPreco();
+        }
+        System.out.printf("\nPreço médio: R$ %.2f", precoMedio / listaProdutos.size());
+
     }
 }
