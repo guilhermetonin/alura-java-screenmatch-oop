@@ -8,8 +8,8 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
-    public Titulo(String nome, int anoDeLancamento) {
-        this.setTitulo(nome);
+    public Titulo(String titulo, int anoDeLancamento) {
+        this.setTitulo(titulo);
         this.setAnoDeLancamento(anoDeLancamento);
     }
 
