@@ -1,10 +1,10 @@
 package br.com.alura.screematch.principal;
 
-import br.com.alura.screematch.calculos.CalculadoraDeTempo;
-import br.com.alura.screematch.calculos.FiltroRecomendacao;
-import br.com.alura.screematch.modelos.Episodio;
-import br.com.alura.screematch.modelos.Filme;
-import br.com.alura.screematch.modelos.Serie;
+import br.com.alura.screematch.calculo.CalculadoraDeTempo;
+import br.com.alura.screematch.calculo.FiltroRecomendacao;
+import br.com.alura.screematch.modelo.Episodio;
+import br.com.alura.screematch.modelo.Filme;
+import br.com.alura.screematch.modelo.Serie;
 
 import java.util.ArrayList;
 
@@ -56,7 +56,7 @@ public class Principal {
         listaDeFilmes.add(avatar);
 
         System.out.println("\nTamanho da Lista: " + listaDeFilmes.size());
-        System.out.println("Primeiro Elemento: " + listaDeFilmes.get(0).getTitulo());
+        System.out.println("Primeiro Elemento: " + listaDeFilmes.get(0).getNome());
         System.out.println("Todos os Filmes: " + listaDeFilmes);
         System.out.println("toString do Filme: " + listaDeFilmes.get(0).toString());
     }

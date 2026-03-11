@@ -1,4 +1,4 @@
-package br.com.alura.screematch.modelos;
+package br.com.alura.screematch.modelo;
 
 public class Serie extends Titulo {
     private int temporadas;
@@ -6,8 +6,8 @@ public class Serie extends Titulo {
     private int minutosPorEpisodio;
     private boolean ativa = false;
 
-    public Serie(String titulo, int anoDeLancamento) {
-        super(titulo, anoDeLancamento);
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
     }
 
     // getters
@@ -51,4 +51,9 @@ public class Serie extends Titulo {
 
     @Deprecated
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {}
+
+    @Override
+    public String toString() {
+        return String.format("Série: %s (%d)", this.getNome(), this.getAnoDeLancamento());
+    }
 }

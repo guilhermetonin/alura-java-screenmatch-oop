@@ -1,12 +1,12 @@
-package br.com.alura.screematch.modelos;
+package br.com.alura.screematch.modelo;
 
-import br.com.alura.screematch.calculos.Classificavel;
+import br.com.alura.screematch.calculo.Classificavel;
 
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
-    public Filme(String titulo, int anoDeLancamento) {
-        super(titulo, anoDeLancamento);
+    public Filme(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
     }
 
     public String getDiretor() {
@@ -24,6 +24,6 @@ public class Filme extends Titulo implements Classificavel {
 
     @Override
     public String toString() {
-        return String.format("Filme: %s (%d)", this.getTitulo(), this.getAnoDeLancamento());
+        return String.format("Filme: %s (%d)", this.getNome(), this.getAnoDeLancamento());
     }
 }

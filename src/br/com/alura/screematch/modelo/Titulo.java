@@ -1,21 +1,21 @@
-package br.com.alura.screematch.modelos;
+package br.com.alura.screematch.modelo;
 
-public class Titulo {
-    private String titulo;
+public class Titulo implements Comparable<Titulo> {
+    private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaDasAvaliacoes = 0;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
-    public Titulo(String titulo, int anoDeLancamento) {
-        this.setTitulo(titulo);
+    public Titulo(String nome, int anoDeLancamento) {
+        this.setNome(nome);
         this.setAnoDeLancamento(anoDeLancamento);
     }
 
     // getters
-    public String getTitulo() {
-        return titulo;
+    public String getNome() {
+        return nome;
     }
 
     public int getAnoDeLancamento() {
@@ -35,8 +35,8 @@ public class Titulo {
     }
 
     // setters
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public void setAnoDeLancamento(int anoDeLancamento) {
@@ -59,7 +59,7 @@ public class Titulo {
                 Soma das avaliações: %f
                 Total de avaliações: %d
                 Incluíso no plano: %b
-                """, titulo, anoDeLancamento, duracaoEmMinutos, somaDasAvaliacoes, totalDeAvaliacoes, incluidoNoPlano);
+                """, nome, anoDeLancamento, duracaoEmMinutos, somaDasAvaliacoes, totalDeAvaliacoes, incluidoNoPlano);
     }
 
     public void avaliaFilme(double nota) {
@@ -71,4 +71,8 @@ public class Titulo {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
 }
