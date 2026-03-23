@@ -1,5 +1,6 @@
 package br.com.alura.screematch.modelo;
 
+import br.com.alura.screematch.excecao.AnoDeLancamentoException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo> {
@@ -17,6 +18,11 @@ public class Titulo implements Comparable<Titulo> {
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+
+        if (meuTituloOmdb.year().length() > 4) {
+            throw new AnoDeLancamentoException("Não foi possível converter o ano " +
+                    "porque tem mais que 4 caracteres.");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
         this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 2));
     }
