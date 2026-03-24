@@ -1,0 +1,22 @@
+[
+  {
+    "marca": "Chevrolet",
+    "modelo": "Onix",
+    "ano": 2021
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "HB20",
+    "ano": 2022
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "ano": 2023
+  },
+  {
+    "marca": "Jeep",
+    "modelo": "Renegade",
+    "ano": 2020
+  }
+]

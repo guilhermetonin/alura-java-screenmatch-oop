@@ -1,8 +1,8 @@
-package desafios.extras.gson;
+package desafios.extras.gson.usuarios;
 
 import com.google.gson.Gson;
-import desafios.extras.gson.modelo.Pessoa;
-import desafios.extras.gson.modelo.Usuario;
+import desafios.extras.gson.usuarios.modelo.Pessoa;
+import desafios.extras.gson.usuarios.modelo.Usuario;
 
 import java.io.IOException;
 import java.net.URI;

@@ -1,4 +1,4 @@
-package desafios.extras.api;
+package desafios.extras.api.receita;
 
 import java.io.IOException;
 import java.net.URI;

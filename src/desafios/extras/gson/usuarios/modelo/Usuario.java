@@ -1,4 +1,4 @@
-package desafios.extras.gson.modelo;
+package desafios.extras.gson.usuarios.modelo;
 
 public class Usuario {
     private int id;
